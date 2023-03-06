@@ -1,0 +1,73 @@
+:host {
+  display: block;
+  flex-direction: column;
+  margin: 0 auto;
+  display: flex;
+  justify-content: end;
+  z-index: 100;
+  width: 100%;
+  --common-size: 120px;
+  --left-spacing: var(--layout-left-spacing)
+}
+
+.add-button {
+  background-color: var(--atomic-primary);
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  padding: 8px 0;
+  cursor: pointer;
+  width: 100%;
+  max-width: var(--common-size);
+}
+
+.add-to-cart_wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.add-to-cart_wrapper__units {
+  display: flex;
+  justify-content: flex-end;
+  height: 30px;
+  width: 100%;
+}
+
+.add-to-cart_wrapper__units input {
+  position: relative;
+  max-width: var(--common-size);
+  width: calc(100% - var(--common-size) - var(--layout-left-spacing));
+  display: block;
+  height: 100%;
+  padding: 4px 8px;
+  border-radius: 10px;
+  margin-right: 2px;
+  border: 1px solid var(--atomic-primary);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .add-to-cart_wrapper__units input {
+    width: calc(100% - var(--common-size));
+  }
+}
+
+.add-to-cart_wrapper__units input::-webkit-outer-spin-button,
+.add-to-cart_wrapper__units input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+
+/* Firefox */
+.add-to-cart_wrapper__units input[type="number"] {
+  -moz-appearance: textfield !important;
+}
+
+.add-to-cart_wrapper__units .label {
+  padding: 0 0 0 10px;
+  font-size: 1rem;
+  flex: 1;
+}
