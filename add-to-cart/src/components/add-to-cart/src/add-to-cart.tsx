@@ -1,18 +1,6 @@
-import { Bindings, resultContext, initializeBindings } from "@coveo/atomic";
-import { Component, Host, h, Element, State, forceUpdate } from "@stencil/core";
-import { Result, Unsubscribe } from "@coveo/headless";
-
-interface CustomResult extends Result {
-  priceAndAvailability:
-    | {
-        Data: {
-          netPrice: string;
-          availability: number;
-          shippingMultiple: number;
-        };
-      }
-    | undefined;
-}
+import { Bindings, initializeBindings } from "@coveo/atomic";
+import { Component, Host, h, Element, forceUpdate } from "@stencil/core";
+import { Unsubscribe } from "@coveo/headless";
 
 @Component({
   tag: "add-to-cart",
@@ -21,79 +9,41 @@ interface CustomResult extends Result {
 })
 export class AddToCart {
   @Element() private host!: Element;
-  @State() quantity: number = 1;
-  @State() private availability: number = 0;
-  private result!: CustomResult;
+  // The Atomic bindings to be resolved on the parent atomic-search-interface.
+  // Used to access the Headless engine in order to create controllers, dispatch actions, access state, etc.
   private bindings?: Bindings;
 
   private i18nUnsubscribe: Unsubscribe = () => {};
 
   public async connectedCallback() {
+    // Wait for the Atomic bindings to be resolved.
     this.bindings = await initializeBindings(this.host);
-    this.result = await resultContext(this.host);
-    this.quantity =
-      this.result.priceAndAvailability?.Data?.shippingMultiple || 1;
-    this.availability = this.result.priceAndAvailability
-      ? (this.result.priceAndAvailability.Data.availability as number)
-      : 0;
 
+    // (Optional) To use if component needs to rerender when the Atomic i18n language changes.
+    // If your component does not use any strings or does not support multiple languages,
+    // you can ignore everything related to i18n.
     const updateLanguage = () => forceUpdate(this);
     this.bindings!.i18n.on("languageChanged", updateLanguage);
     this.i18nUnsubscribe = () =>
       this.bindings!.i18n.off("languageChanged", updateLanguage);
-
   }
 
   private onAddToOptionClicked = async (e: Event) => {
-    //Callback function to add element to cart
+    // Function to add element to cart
   };
-
-  changeQuantity(e: Event) {
-    const qtyValue = parseFloat((e.target as HTMLInputElement).value);
-
-    this.quantity = qtyValue;
-  }
-
-  checkIsNumber(e: KeyboardEvent) {
-    if ((this.quantity?.toString()?.length || 0) + 1 > 11) {
-      e.preventDefault();
-      return false;
-    }
-    return true;
-  }
-
-  updateQuantity(e: KeyboardEvent) {
-    this.quantity = parseFloat((e.target as HTMLInputElement).value);
-  }
 
   public disconnectedCallback() {
     this.i18nUnsubscribe();
   }
 
   render() {
-    const isAvailable = true;
-    const isPublished = true;
-
-    if (!isAvailable || !isPublished) {
-      this.host.remove();
-      return;
-    }
     return (
       <Host>
-        {isAvailable ? (
+        {
           <div
             class="add-to-cart_wrapper"
           >
             <div class="add-to-cart_wrapper__units">
-              <input
-                part="quantity"
-                type="number"
-                onKeyUp={(e) => this.updateQuantity(e)}
-                onKeyPress={(e) => this.checkIsNumber(e)}
-                value={this.quantity}
-                maxLength={10}
-                onChange={(e) => this.changeQuantity(e)}
-              />
               <button
                 class="add-button"
                 onClick={(e) => this.onAddToOptionClicked(e)}
@@ -102,9 +52,7 @@ export class AddToCart {
               </button>
             </div>
           </div>
-        ) : (
-          ""
-        )}
+        }
       </Host>
     );
   }
