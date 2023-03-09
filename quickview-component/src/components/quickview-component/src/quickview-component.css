@@ -1,0 +1,45 @@
+:host {
+	display: block;
+}
+
+#quick-view {
+	z-index: 10;
+	background: rgba(220, 207, 207, 0.4);
+	height: 100%;
+	width: 100%;
+}
+
+#quick-view.open {
+	display: block;
+}
+
+#quick-view.closed {
+	display: none;
+}
+
+#quick-view iframe {
+	border: none;
+	height: 50%;
+	width: 50%;
+	background: white;
+}
+
+#quick-view,
+#quick-view iframe {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#quick-view button {
+	cursor: pointer;
+	position: fixed;
+	z-index: 10;
+	right: 25%;
+	top: 25%;
+	background: white;
+	border: none;
+	width: 30px;
+	height: 30px;
+}
