@@ -1,0 +1,36 @@
+:host {
+  display: block;
+  flex-direction: column;
+  margin: 0 auto;
+  display: flex;
+  justify-content: end;
+  z-index: 100;
+  width: 100%;
+  --common-size: 120px;
+  --left-spacing: var(--layout-left-spacing)
+}
+
+.add-button {
+  background-color: var(--atomic-primary);
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  padding: 8px 0;
+  cursor: pointer;
+  width: 100%;
+  max-width: var(--common-size);
+}
+
+.add-to-cart_wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.add-to-cart_wrapper__units {
+  display: flex;
+  justify-content: flex-end;
+  height: 30px;
+  width: 100%;
+}
