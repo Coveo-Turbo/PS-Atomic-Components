@@ -1,0 +1,129 @@
+:host {
+  display: flex;
+  font-family: var(--atomic-font-family);
+  font-size: .9rem;
+  width: 100px;
+  height: 40px;
+  grid-area: queries;
+  position: relative;
+}
+
+.my-queries-button {
+  border: 2px solid lightgrey;
+  border-radius: 3px;
+  padding: 6px 8px;
+  font-family: var(--atomic-font-family);
+  background-color: white;
+  cursor: pointer;
+}
+
+.my-queries-button:hover, .my-queries-button.clicked {
+  background-color: var(--atomic-primary-light);
+  color: white;
+  border: 2px solid transparent;
+}
+
+.saved-dropdown {
+  position: absolute;
+  border: 1px solid lightgray;
+  background: white;
+  border-radius: 4px;
+  margin-top: 4px;
+  top: 40px;
+  z-index: 1000;
+}
+
+.saved-dropdown input {
+  width: 85%;
+  margin: 12px 8px 8px 8px;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  line-height: 28px;
+  padding: 0 6px;
+}
+
+.saved-dropdown ul {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  overflow: hidden;
+}
+
+.saved-dropdown li {
+  margin: 0;
+  list-style-type: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.saved-dropdown li:last-child {
+  margin-bottom: 6px;
+}
+
+.saved-dropdown li:hover {
+  background-color: var(--atomic-primary-light);
+  color: white;
+}
+
+.saved-dropdown li > span.close {
+  font-size: .7rem;
+  align-self: center;
+}
+
+.add-query {
+  display: flex;
+  padding: 8px 12px;
+  font-size: .8rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-top: 1px solid rgb(235, 235, 235);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1001;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .6;
+}
+
+.add-query-window {
+  height: 60px;
+  width: 200px;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.add-query-window .title {
+  margin-bottom: 10px;
+}
+
+.add-query-window .input {
+  padding: 3px;
+}
+
+.add-query-window .close {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  cursor: pointer;
+}
