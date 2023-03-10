@@ -57,6 +57,12 @@ There are three strategies we recommend for using web components built with Sten
 
 The first step for all three of these strategies is to [publish to NPM](https://docs.npmjs.com/getting-started/publishing-npm-packages).
 
+## Components
+
+### Export Search Results
+This component provides functionality that allows users to export all the search results in a csv file. This component is designed to be placed inside `<atomic-layout-section section="status">` tag, but can be placed anywhere else as long as the proper css changes are made. Run `npm run start` in this directory locally to see an implementation of this component. 
+![Screenshot 2023-03-10 at 1 32 24 PM](https://user-images.githubusercontent.com/122834615/224396249-580ff829-a2e5-4cee-8e6a-579267a3ab67.png)
+
 ### Script tag
 
 - Put a script tag similar to this `<script type='module' src='https://unpkg.com/my-component@0.0.1/dist/my-component.esm.js'></script>` in the head of your index.html
