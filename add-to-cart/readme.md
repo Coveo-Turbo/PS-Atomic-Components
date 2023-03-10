@@ -57,6 +57,13 @@ There are three strategies we recommend for using web components built with Sten
 
 The first step for all three of these strategies is to [publish to NPM](https://docs.npmjs.com/getting-started/publishing-npm-packages).
 
+## Components
+
+### Add to cart
+This component provide a button with a callback function passed to the on click event of the button that adds the item to a cart. This component can be placed in one of the tags inside of the ``atomic-result-template`` tag. Run `npm run start` in this directory locally to see an implementation of this component. 
+![Screenshot 2023-03-10 at 11 22 24 AM](https://user-images.githubusercontent.com/122834615/224368735-54990581-53d0-4ee9-9a3f-dd2e068c9228.png)
+
+
 ### Script tag
 
 - Put a script tag similar to this `<script type='module' src='https://unpkg.com/my-component@0.0.1/dist/my-component.esm.js'></script>` in the head of your index.html
