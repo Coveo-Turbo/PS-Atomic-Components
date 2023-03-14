@@ -1,5 +1,5 @@
 import { Bindings, initializeBindings } from "@coveo/atomic";
-import { Component, Host, h, Element, forceUpdate } from "@stencil/core";
+import { Component, Host, h, Element, forceUpdate, Prop } from "@stencil/core";
 import { Unsubscribe } from "@coveo/headless";
 
 @Component({
@@ -15,6 +15,8 @@ export class AddToCart {
 
   private i18nUnsubscribe: Unsubscribe = () => {};
 
+  @Prop() callbackFunction: string;
+
   public async connectedCallback() {
     // Wait for the Atomic bindings to be resolved.
     this.bindings = await initializeBindings(this.host);
@@ -29,7 +31,10 @@ export class AddToCart {
   }
 
   private onAddToOptionClicked = async (e: Event) => {
-    // Function to add element to cart
+    if(this.callbackFunction && this.callbackFunction in window) {
+      // Calling callback function
+      (window[this.callbackFunction as any] as unknown as Function)();
+    }
   };
 
   public disconnectedCallback() {

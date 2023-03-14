@@ -16,6 +16,11 @@
     <script type="module" src="/atomic/atomic.esm.js"></script>
     <!-- Custom Elements Lazy Loading -->
     <script type="module" src="/build/my-custom-components.esm.js"></script>
+    <script >
+      window.addToCartCallback = function () {
+        console.log('add your add to cart logic here');
+      }
+    </script>
   </head>
   <body>
     <atomic-search-interface>
@@ -73,7 +78,7 @@
                   </atomic-result-section-title>
 
                   <atomic-result-section-emphasized>
-                    <add-to-cart></add-to-cart>
+                    <add-to-cart callback-function="addToCartCallback"></add-to-cart>
                   </atomic-result-section-emphasized>
 
                   <atomic-result-section-excerpt>

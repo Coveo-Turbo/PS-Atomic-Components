@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface AddToCart {
+        "callbackFunction": string;
     }
 }
 declare global {
@@ -22,6 +23,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface AddToCart {
+        "callbackFunction"?: string;
     }
     interface IntrinsicElements {
         "add-to-cart": AddToCart;
