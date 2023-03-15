@@ -1,0 +1,84 @@
+label {
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: var(--atomic-text-sm);
+  font-family: var(--atomic-font-family);
+  font-weight: var(--atomic-font-bold);
+}
+
+.relative {
+  position: relative;
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+}
+
+select:focus {
+  outline: none;
+}
+
+.wrapper:hover select,
+.wrapper:hover .seperator {
+  border-color: var(--atomic-primary);
+  color: var(--atomic-primary);
+}
+
+select {
+  padding-right: 3.25rem;
+  padding-left: 0.75rem;
+  appearance: none;
+  flex-grow: 1;
+  height: 2.5rem;
+  cursor: pointer;
+  border-radius: var(--atomic-border-radius);
+  border-width: 1px;
+  border-color: var(--atomic-neutral);
+  background-color: var(--atomic-background);
+  color: var(--atomic-on-background);
+  font-family: var(--atomic-font-family);
+  font-size: var(--atomic-text-base);
+  text-transform: none;
+  font-weight: var(--atomic-font-normal);
+}
+
+.seperator {
+  border-color: var(--atomic-neutral);
+  border-left-width: 1px;
+  border-left-style: solid;
+  justify-content: center;
+  width: 2.5rem;
+  display: flex;
+  bottom: 1px;
+  top: 1px;
+  right: 0px;
+  position: absolute;
+  pointer-events: none;
+  align-items: center;
+}
+
+atomic-icon {
+  width: 0.625rem;
+  display: inline-block;
+  fill: currentColor;
+  aspect-ratio: 1 / 1;
+  height: auto
+}
+
+@supports not (aspect-ratio: 1 / 1) {
+  atomic-icon {
+      height: auto
+  }
+}
+
+atomic-icon>svg {
+  width: 100%;
+  max-height: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto
+}
+
+@supports not (aspect-ratio: 1 / 1) {
+  atomic-icon>svg {
+      height: auto
+  }
+}
