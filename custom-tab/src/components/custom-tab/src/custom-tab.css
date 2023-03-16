@@ -1,0 +1,18 @@
+a {
+  color: var(--atomic-primary); 
+  text-decoration: none;
+  cursor: pointer;
+  height: 3.25rem;
+  display: inline-block;
+  font-size: var(--atomic-text-lg);
+  padding: 0 1.25rem 0.125rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: normal;
+  font-family: var(--atomic-font-family)
+}
+
+a.selected {
+  border-bottom: 0.125rem solid var(--atomic-on-background);
+  padding-bottom: 0;
+}
