@@ -19,6 +19,10 @@
   </head>
   <body>
     <atomic-search-interface>
+      <div class="tab-container"> 
+        <custom-tab expression="" label="All" is-active="true"></custom-tab> 
+        <custom-tab expression="@source==(YouTube)" label="Youtube Sources" is-active="false"></custom-tab> 
+      </div>
       <atomic-search-layout>
         <atomic-layout-section section="search">
           <atomic-search-box></atomic-search-box>
@@ -31,10 +35,6 @@
         </atomic-layout-section>
         <atomic-layout-section section="main">
           <atomic-layout-section section="status">
-            <div class="tab-container"> 
-              <custom-tab expression="" label="All" is-active="true"></custom-tab> 
-              <custom-tab expression="@source==(YouTube)" label="Youtube Sources" is-active="false"></custom-tab> 
-            </div>
             <atomic-breadbox></atomic-breadbox>
             <atomic-query-summary></atomic-query-summary>
             <atomic-refine-toggle></atomic-refine-toggle>
