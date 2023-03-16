@@ -1,7 +1,8 @@
 {
   "name": "export-search-results",
   "version": "0.0.1",
-  "description": "@coveo/atomic component starter",
+  "description": "Downloads search results into a csv file",
+  "homepage": "https://github.com/Coveo-Turbo/PS-Atomic-Components/tree/src/components/export-search-results",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",

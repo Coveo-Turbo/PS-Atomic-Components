@@ -1,7 +1,8 @@
 {
   "name": "add-to-cart",
   "version": "0.0.1",
-  "description": "@coveo/atomic component starter",
+  "description": "Adds an item to shopping cart",
+  "homepage": "https://github.com/Coveo-Turbo/PS-Atomic-Components/tree/src/components/add-to-cart",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",

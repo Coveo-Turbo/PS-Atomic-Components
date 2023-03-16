@@ -1,7 +1,8 @@
 {
   "name": "search-box-category-suggestions",
   "version": "0.0.1",
-  "description": "@coveo/atomic component starter",
+  "description": "Adds category suggestions in the search box",
+  "homepage": "https://github.com/Coveo-Turbo/PS-Atomic-Components/tree/src/components/search-box-category-suggestions",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
