@@ -1,6 +1,6 @@
 {
   "name": "search-box-category-suggestions",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Adds category suggestions in the search box",
   "homepage": "https://github.com/Coveo-Turbo/PS-Atomic-Components/tree/main/src/components/search-box-category-suggestions",
   "main": "dist/index.cjs.js",

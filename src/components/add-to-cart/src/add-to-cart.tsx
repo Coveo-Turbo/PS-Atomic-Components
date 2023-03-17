@@ -33,7 +33,7 @@ export class AddToCart {
   private onAddToOptionClicked = async (e: Event) => {
     if(this.callbackFunction && this.callbackFunction in window) {
       // Calling callback function
-      (window[this.callbackFunction as any] as unknown as Function)();
+      (window[this.callbackFunction as any] as unknown as Function)(e);
     }
   };
 
