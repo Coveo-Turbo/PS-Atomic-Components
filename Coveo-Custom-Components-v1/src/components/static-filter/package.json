@@ -1,8 +1,8 @@
 {
-  "name": "save-query",
+  "name": "static-filter",
   "version": "0.0.1",
-  "description": "Adds and saves queries in the browser",
-  "homepage": "https://github.com/Coveo-Turbo/PS-Atomic-Components/tree/main/src/components/save-query",
+  "description": "A custom toggle button that filters results in the search interface",
+  "homepage": "https://github.com/Coveo-Turbo/PS-Atomic-Components/tree/main/Coveo-Custom-Components-v1/src/components/static-filter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
