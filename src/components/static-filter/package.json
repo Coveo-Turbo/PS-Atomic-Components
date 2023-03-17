@@ -1,8 +1,8 @@
 {
-  "name": "export-search-results",
+  "name": "static-filter",
   "version": "0.0.1",
-  "description": "Downloads search results into a csv file",
-  "homepage": "https://github.com/Coveo-Turbo/PS-Atomic-Components/tree/main/Coveo-Custom-Components-v1/src/components/export-search-results",
+  "description": "A custom toggle button that filters results in the search interface",
+  "homepage": "https://github.com/Coveo-Turbo/PS-Atomic-Components/tree/main/src/components/static-filter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
