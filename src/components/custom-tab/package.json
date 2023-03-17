@@ -2,7 +2,7 @@
   "name": "custom-tab",
   "version": "0.0.1",
   "description": "Adds a custom tab in the search interface",
-  "homepage": "https://github.com/Coveo-Turbo/PS-Atomic-Components/tree/src/components/custom-tab",
+  "homepage": "https://github.com/Coveo-Turbo/PS-Atomic-Components/tree/main/src/components/custom-tab",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
