@@ -35,7 +35,7 @@ export class CustomTab {
         expression: this.expression,
       };
       const props: TabProps = {
-        initialState: { isActive: false },
+        initialState: { isActive: this.isActive },
         options: options,
       };
       this.tabController = buildTab(this.bindings.engine, props);

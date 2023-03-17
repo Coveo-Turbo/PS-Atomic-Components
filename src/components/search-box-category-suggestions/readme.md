@@ -1,20 +1,23 @@
 # Search Box Category Suggestions
-#### Requirements:
-*Props*: 
-- callback-function: string
 
-    This component adds functionality to the search box by allowing category suggestions. It should be placed inside of the `atomic search box` component. An example implmentation can be seen below. The logic for what happends when a suggestion in selected can be placed inside of the callback function in the script tag.
+## Props 
+| Name | Type   | Description   |
+| :---:   | :---: | :---: |
+| callback-function | string   | Name of callback function to be called when category suggestion is clicked   |
+
+ This component adds functionality to the search box by providing category suggestions. It should be placed inside of the `<atomic-search-box>` component. The logic for what happens when a suggestion is selected can be placed inside the callback function in the script tag.
     
 ```
 <script>
     window.selectCategorySuggestion = function () {
-    console.log('put your select category suggestion function logic here');
+        console.log('put your select category suggestion function logic here');
     }
 </script>
 ```
 ```
 <atomic-search-box>
-    <search-box-category-suggestions callback-function="selectCategorySuggestion"></search-box-category-suggestions>
+    <search-box-category-suggestions callback-function="selectCategorySuggestion">
+    </search-box-category-suggestions>
 </atomic-search-box>
 ```
 
