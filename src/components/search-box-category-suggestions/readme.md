@@ -5,7 +5,7 @@
 | :---:   | :---: | :---: |
 | callback-function | string   | Name of callback function to be called when category suggestion is clicked   |
 
- This component adds functionality to the search box by providing category suggestions. It should be placed inside of the `<atomic-search-box>` component. The logic for what happens when a suggestion is selected can be placed inside the callback function in the script tag.
+ This component adds functionality to the search box by providing category suggestions. It should be placed inside of the `<atomic-search-box>` component. The logic for what happens when a suggestion is selected can be placed inside of a script tag in the html document.
     
 ```
 <script>

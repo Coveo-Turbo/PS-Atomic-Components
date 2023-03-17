@@ -9,7 +9,7 @@
 | choices-displayed | string   | Specify the choices for number of results to render per page |
 
 
-This component will render a drop down to specify the number of results to render per page.
+This component will render a drop down button to select the number of results to render per page.
 
 
 ```

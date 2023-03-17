@@ -4,7 +4,7 @@
 | :---:   | :---: | :---: |
 | callback-function | string   | Name of callback function to be called when add to cart button is clicked |
 
-This component provides a button with a callback function to be passed to the onClick event of the button that adds the item to a cart. This component can be placed in one of the tags inside of the ``<atomic-result-template>`` tag. The logic for the add to cart component can be placed inside of a script tag in the html document.
+This component provides a button with a callback function that needs to be edited to contain logic as to how to add the item to a cart. This component can be placed in one of the tags inside of the ``<atomic-result-template>`` tag. The logic for the add to cart component can be placed inside of a script tag in the html document.
 ```
 <script >
     window.addToCartCallback = function () {
