@@ -4,8 +4,9 @@
 | Name | Type   | Description   |
 | :---:   | :---: | :---: |
 | callback-function | string   | Name of callback function to be called when category suggestion is clicked   |
+| field | string   | Name of the category field |
 
- This component adds functionality to the search box by providing category suggestions. It should be placed inside of the `<atomic-search-box>` component. The logic for what happens when a suggestion is selected can be placed inside of a script tag in the html document.
+ This component adds functionality to the search box by providing category suggestions. It should be placed inside of the `<atomic-search-box>` component. The field used needs to be a hierarchical field. The logic for what happens when a suggestion is selected can be placed inside of a script tag in the html document.
     
 ```
 <script>
@@ -16,7 +17,7 @@
 ```
 ```
 <atomic-search-box>
-    <search-box-category-suggestions callback-function="selectCategorySuggestion">
+    <search-box-category-suggestions field="ec_category" callback-function="selectCategorySuggestion">
     </search-box-category-suggestions>
 </atomic-search-box>
 ```
