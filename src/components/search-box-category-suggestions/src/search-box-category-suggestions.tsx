@@ -29,15 +29,16 @@ export class SearchBoxCategorySuggestions {
 
   @State() public error!: Error;
   @State() public categorySuggestions!: CategoryFacetSearchResult[];
-  @Prop() callbackFunction: string;
+  @Prop() callbackFunction!: string;
+  @Prop() field!: string;
 
   connectedCallback() {
     try {
       dispatchSearchBoxSuggestionsEvent((bindings: any) => {
         this.bindings = bindings;
         const options = {
-          field: "ec_category",
-          facetId: "ec_category",
+          field: this.field,
+          facetId: this.field,
         };
         this.categoryFieldSuggestions = buildCategoryFieldSuggestions(
           this.bindings.engine,
