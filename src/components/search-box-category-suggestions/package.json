@@ -1,6 +1,6 @@
 {
   "name": "search-box-category-suggestions",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Adds category suggestions in the search box",
   "homepage": "https://github.com/Coveo-Turbo/PS-Atomic-Components/tree/main/src/components/search-box-category-suggestions",
   "main": "dist/index.cjs.js",
@@ -24,8 +24,8 @@
     "generate": "stencil generate"
   },
   "dependencies": {
+    "@coveo/atomic": "^2.21.1",
     "@coveo/headless": "2.8.3",
-    "@coveo/atomic": "2.19.4",
     "@stencil/core": "2.22.2"
   },
   "devDependencies": {
@@ -34,8 +34,8 @@
     "jest": "29.4.3",
     "jest-cli": "29.4.3",
     "puppeteer": "19.7.2",
-    "rollup-plugin-html": "0.2.1",
-    "rimraf": "4.1.2"
+    "rimraf": "4.1.2",
+    "rollup-plugin-html": "0.2.1"
   },
   "keywords": [
     "coveo-atomic-component"
