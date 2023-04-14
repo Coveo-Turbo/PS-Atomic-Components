@@ -14,6 +14,14 @@ import {
   styleUrl: "custom-tab.css",
   shadow: true,
 })
+
+/**
+ * The `custom-tab` component will provide a tab functionality in the search interface.
+ *
+ * @part tab-anchor - the tab anchor tag.
+ * @part tab-label - the tab label.
+ */
+
 export class CustomTab {
   @Prop() expression!: string;
   @Prop() label!: string;
@@ -67,9 +75,10 @@ export class CustomTab {
       return;
     }
 
+    const activeClass = this.isActive ? 'active': '';
     return (
-      <a onClick={() => this.tabController.select()}>
-        <p>{this.label}</p>
+      <a part="tab-anchor" class={activeClass} onClick={() => this.tabController.select()}>
+        <span part="tab-label">{this.label}</span>
       </a>
     );
   }

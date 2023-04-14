@@ -1,18 +1,28 @@
 a {
-  color: var(--atomic-primary); 
-  text-decoration: none;
+  margin: 0px 6px;
+  padding: 16px;
+  height: 1rem;
+  width: fit-content;
+  color: #1372ec;
+  font-weight: 500;
+  border-radius: 26px;
+  border: 1px solid #1372ec;
+  background: none;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
   cursor: pointer;
-  height: 3.25rem;
-  display: inline-block;
-  font-size: var(--atomic-text-lg);
-  padding: 0 1.25rem 0.125rem;
-  text-transform: uppercase;
-  vertical-align: middle;
-  white-space: normal;
-  font-family: var(--atomic-font-family)
+  user-select: none;
 }
 
-a.selected {
-  border-bottom: 0.125rem solid var(--atomic-on-background);
-  padding-bottom: 0;
+a.active {
+  color: white;
+  background-color: #1372ec;
+  transition: background-color 0.5s ease 0s;
+}
+
+a:hover{
+  color: white;
+  background-color: #0b6ae7;
+  transition: background-color 0.5s ease 0s;
 }

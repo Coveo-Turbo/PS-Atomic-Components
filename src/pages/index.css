@@ -10,6 +10,10 @@ div.tab-container {
   background-color: var(--atomic-neutral);
   text-align: center;
   border-bottom: 0.075rem solid var(--atomic-neutral-dark);
-  font-size: 0;
   white-space: nowrap;
+  display: flex;
+}
+
+.tab-bar{
+  display: flex;
 }

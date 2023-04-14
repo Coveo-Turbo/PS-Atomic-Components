@@ -5,8 +5,15 @@
 | :---:   | :---: | :---: |
 | expression | string   | Query expression to be applied when button is toggled  |
 | label | string   | Renders a title for the custom tab   |
-| label | boolean   | Defines whether the custom tab is active on render. There should only be one active tab on render, if there are multiple, the last rendered active tab will be active   |
+| is-active | boolean   | Defines whether the custom tab is active on render. There should only be one active tab on render, if there are multiple, the last rendered active tab will be active   |
 
+
+## Shadow Parts
+
+| Part           | Description |
+| -------------- | ----------- |
+| `"tab-anchor"` |     part for the tab button styling        |
+| `"tab-label"`  |       part for the label styling      |
 
 This component provides a custom tab that allows isolating the search interface into multiple use cases. For example, in one tab you might want to show only youtube sources and in another tab you want to show all your sources and would like to easily switch between these two tabs, this component allows you to do that. This component can be placed anywhere but it is recommended that it is placed above the `<atomic-search-layout>` div so that it is on top of the page.
 ```

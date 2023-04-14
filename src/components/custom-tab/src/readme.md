@@ -14,6 +14,14 @@
 | `label` _(required)_      | `label`      |             | `string`  | `undefined` |
 
 
+## Shadow Parts
+
+| Part           | Description |
+| -------------- | ----------- |
+| `"tab-anchor"` |             |
+| `"tab-label"`  |             |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
