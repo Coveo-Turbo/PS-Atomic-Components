@@ -27,6 +27,7 @@ export namespace Components {
      */
     interface SearchBoxCategorySuggestions {
         "callbackFunction": string;
+        "field": string;
     }
     interface StaticFilter {
         "caption": string;
@@ -110,7 +111,8 @@ declare namespace LocalJSX {
      * The `search-box-category-suggestions` component can be added as a child of an `atomic-search-box` component, allowing for the configuration of category suggestions.
      */
     interface SearchBoxCategorySuggestions {
-        "callbackFunction"?: string;
+        "callbackFunction": string;
+        "field": string;
     }
     interface StaticFilter {
         "caption": string;
