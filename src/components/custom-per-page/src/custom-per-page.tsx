@@ -73,8 +73,13 @@ export class CustomPerPage{
   }
 
   private validateChoicesDisplayed() {
+    if(!this.choicesDisplayed) {
+      const errorMsg = `The choicesDisplayed options is not set or empty, it should be a number or list of number separated by commas`;
+      this.bindings?.engine.logger.error(errorMsg, this);
+      throw new Error(errorMsg);
+    }
     return this.choicesDisplayed.split(',').map((choice) => {
-      const parsedChoice = parseInt(choice);
+      const parsedChoice = parseInt(choice.trim());
       if (isNaN(parsedChoice)) {
         const errorMsg = `The choice value "${choice}" from the "choicesDisplayed" option is not a number.`;
         this.bindings?.engine.logger.error(errorMsg, this);
