@@ -5,6 +5,8 @@
 | :---:   | :---: | :---: |
 | callback-function | string   | Name of callback function to be called when category suggestion is clicked   |
 | field | string   | Name of the category field |
+| delimiter | string   | The delimiter used in the category field hierarchy |
+| basePath | [] string   | Array of base path for the categories. |
 
  This component adds functionality to the search box by providing category suggestions. It should be placed inside of the `<atomic-search-box>` component. The field used needs to be a hierarchical field. The logic for what happens when a suggestion is selected can be placed inside of a script tag in the html document.
     
