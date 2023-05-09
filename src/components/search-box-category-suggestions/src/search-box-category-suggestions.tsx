@@ -31,6 +31,8 @@ export class SearchBoxCategorySuggestions {
   @State() public categorySuggestions!: CategoryFacetSearchResult[];
   @Prop() callbackFunction!: string;
   @Prop() field!: string;
+  @Prop() delimiter!: string;
+  @Prop() basePath: string[] = [];
 
   connectedCallback() {
     try {
@@ -39,6 +41,8 @@ export class SearchBoxCategorySuggestions {
         const options = {
           field: this.field,
           facetId: this.field,
+          basePath: this.basePath,
+          delimitingCharacter: this.delimiter
         };
         this.categoryFieldSuggestions = buildCategoryFieldSuggestions(
           this.bindings.engine,

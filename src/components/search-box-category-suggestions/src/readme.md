@@ -11,10 +11,12 @@ The `search-box-category-suggestions` component can be added as a child of an `a
 
 ## Properties
 
-| Property                        | Attribute           | Description | Type     | Default     |
-| ------------------------------- | ------------------- | ----------- | -------- | ----------- |
-| `callbackFunction` _(required)_ | `callback-function` |             | `string` | `undefined` |
-| `field` _(required)_            | `field`             |             | `string` | `undefined` |
+| Property                        | Attribute           | Description | Type       | Default     |
+| ------------------------------- | ------------------- | ----------- | ---------- | ----------- |
+| `basePath`                      | --                  |             | `string[]` | `[]`        |
+| `callbackFunction` _(required)_ | `callback-function` |             | `string`   | `undefined` |
+| `delimiter` _(required)_        | `delimiter`         |             | `string`   | `undefined` |
+| `field` _(required)_            | `field`             |             | `string`   | `undefined` |
 
 
 ## Shadow Parts
