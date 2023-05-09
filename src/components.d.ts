@@ -14,6 +14,7 @@ export namespace Components {
         "initialChoice"?: number;
     }
     interface CustomTab {
+        "excludedFacets": string;
         "expression": string;
         "isActive": boolean;
         "label": string;
@@ -26,6 +27,15 @@ export namespace Components {
      * The `search-box-category-suggestions` component can be added as a child of an `atomic-search-box` component, allowing for the configuration of category suggestions.
      */
     interface SearchBoxCategorySuggestions {
+        "basePath": string[];
+        "callbackFunction": string;
+        "delimiter": string;
+        "field": string;
+    }
+    /**
+     * The `search-box-field-suggestions` component can be added as a child of an `atomic-search-box` component, allowing for the configuration of category suggestions.
+     */
+    interface SearchBoxFieldSuggestions {
         "callbackFunction": string;
         "field": string;
     }
@@ -74,6 +84,15 @@ declare global {
         prototype: HTMLSearchBoxCategorySuggestionsElement;
         new (): HTMLSearchBoxCategorySuggestionsElement;
     };
+    /**
+     * The `search-box-field-suggestions` component can be added as a child of an `atomic-search-box` component, allowing for the configuration of category suggestions.
+     */
+    interface HTMLSearchBoxFieldSuggestionsElement extends Components.SearchBoxFieldSuggestions, HTMLStencilElement {
+    }
+    var HTMLSearchBoxFieldSuggestionsElement: {
+        prototype: HTMLSearchBoxFieldSuggestionsElement;
+        new (): HTMLSearchBoxFieldSuggestionsElement;
+    };
     interface HTMLStaticFilterElement extends Components.StaticFilter, HTMLStencilElement {
     }
     var HTMLStaticFilterElement: {
@@ -87,6 +106,7 @@ declare global {
         "export-search-results": HTMLExportSearchResultsElement;
         "save-query": HTMLSaveQueryElement;
         "search-box-category-suggestions": HTMLSearchBoxCategorySuggestionsElement;
+        "search-box-field-suggestions": HTMLSearchBoxFieldSuggestionsElement;
         "static-filter": HTMLStaticFilterElement;
     }
 }
@@ -99,6 +119,7 @@ declare namespace LocalJSX {
         "initialChoice"?: number;
     }
     interface CustomTab {
+        "excludedFacets": string;
         "expression": string;
         "isActive": boolean;
         "label": string;
@@ -111,6 +132,15 @@ declare namespace LocalJSX {
      * The `search-box-category-suggestions` component can be added as a child of an `atomic-search-box` component, allowing for the configuration of category suggestions.
      */
     interface SearchBoxCategorySuggestions {
+        "basePath"?: string[];
+        "callbackFunction": string;
+        "delimiter": string;
+        "field": string;
+    }
+    /**
+     * The `search-box-field-suggestions` component can be added as a child of an `atomic-search-box` component, allowing for the configuration of category suggestions.
+     */
+    interface SearchBoxFieldSuggestions {
         "callbackFunction": string;
         "field": string;
     }
@@ -125,6 +155,7 @@ declare namespace LocalJSX {
         "export-search-results": ExportSearchResults;
         "save-query": SaveQuery;
         "search-box-category-suggestions": SearchBoxCategorySuggestions;
+        "search-box-field-suggestions": SearchBoxFieldSuggestions;
         "static-filter": StaticFilter;
     }
 }
@@ -141,6 +172,10 @@ declare module "@stencil/core" {
              * The `search-box-category-suggestions` component can be added as a child of an `atomic-search-box` component, allowing for the configuration of category suggestions.
              */
             "search-box-category-suggestions": LocalJSX.SearchBoxCategorySuggestions & JSXBase.HTMLAttributes<HTMLSearchBoxCategorySuggestionsElement>;
+            /**
+             * The `search-box-field-suggestions` component can be added as a child of an `atomic-search-box` component, allowing for the configuration of category suggestions.
+             */
+            "search-box-field-suggestions": LocalJSX.SearchBoxFieldSuggestions & JSXBase.HTMLAttributes<HTMLSearchBoxFieldSuggestionsElement>;
             "static-filter": LocalJSX.StaticFilter & JSXBase.HTMLAttributes<HTMLStaticFilterElement>;
         }
     }
