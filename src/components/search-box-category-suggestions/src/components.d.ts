@@ -10,7 +10,9 @@ export namespace Components {
      * The `search-box-category-suggestions` component can be added as a child of an `atomic-search-box` component, allowing for the configuration of category suggestions.
      */
     interface SearchBoxCategorySuggestions {
+        "basePath": string[];
         "callbackFunction": string;
+        "delimiter": string;
         "field": string;
     }
 }
@@ -33,7 +35,9 @@ declare namespace LocalJSX {
      * The `search-box-category-suggestions` component can be added as a child of an `atomic-search-box` component, allowing for the configuration of category suggestions.
      */
     interface SearchBoxCategorySuggestions {
+        "basePath"?: string[];
         "callbackFunction": string;
+        "delimiter": string;
         "field": string;
     }
     interface IntrinsicElements {
