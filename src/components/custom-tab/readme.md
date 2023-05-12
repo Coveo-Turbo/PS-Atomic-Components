@@ -6,6 +6,7 @@
 | expression | string   | Query expression to be applied when button is toggled  |
 | label | string   | Renders a title for the custom tab   |
 | is-active | boolean   | Defines whether the custom tab is active on render. There should only be one active tab on render, if there are multiple, the last rendered active tab will be active   |
+| excluded-facets | string | comma separated list of facetid or facet fields that should be excluded from the tab.|
 
 
 ## Shadow Parts
@@ -18,8 +19,8 @@
 This component provides a custom tab that allows isolating the search interface into multiple use cases. For example, in one tab you might want to show only youtube sources and in another tab you want to show all your sources and would like to easily switch between these two tabs, this component allows you to do that. This component can be placed anywhere but it is recommended that it is placed above the `<atomic-search-layout>` div so that it is on top of the page.
 ```
 <div class="tab-container"> 
-    <custom-tab expression="" label="All" is-active="true"></custom-tab> 
-    <custom-tab expression="@source==(YouTube)" label="Youtube Sources" is-active="false"></custom-tab> 
+    <custom-tab expression="" label="All" is-active="true" ></custom-tab> 
+    <custom-tab expression="@source==(YouTube)" label="Youtube Sources" is-active="false" excluded-facets="source,filetype"></custom-tab> 
 </div>
 ```
 

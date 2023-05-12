@@ -7,11 +7,12 @@
 
 ## Properties
 
-| Property                  | Attribute    | Description | Type      | Default     |
-| ------------------------- | ------------ | ----------- | --------- | ----------- |
-| `expression` _(required)_ | `expression` |             | `string`  | `undefined` |
-| `isActive` _(required)_   | `is-active`  |             | `boolean` | `undefined` |
-| `label` _(required)_      | `label`      |             | `string`  | `undefined` |
+| Property                      | Attribute         | Description | Type      | Default     |
+| ----------------------------- | ----------------- | ----------- | --------- | ----------- |
+| `excludedFacets` _(required)_ | `excluded-facets` |             | `string`  | `undefined` |
+| `expression` _(required)_     | `expression`      |             | `string`  | `undefined` |
+| `isActive` _(required)_       | `is-active`       |             | `boolean` | `undefined` |
+| `label` _(required)_          | `label`           |             | `string`  | `undefined` |
 
 
 ## Shadow Parts

@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface CustomTab {
+        "excludedFacets": string;
         "expression": string;
         "isActive": boolean;
         "label": string;
@@ -25,6 +26,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface CustomTab {
+        "excludedFacets": string;
         "expression": string;
         "isActive": boolean;
         "label": string;

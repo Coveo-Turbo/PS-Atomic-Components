@@ -7,6 +7,7 @@ import {
   TabProps,
   buildTab,
   Unsubscribe,
+  loadFacetOptionsActions
 } from "@coveo/headless";
 
 @Component({
@@ -26,31 +27,46 @@ export class CustomTab {
   @Prop() expression!: string;
   @Prop() label!: string;
   @Prop() isActive!: boolean;
+  @Prop() excludedFacets!: string;
 
   private bindings?: Bindings;
   private error?: Error;
   private tabController!: HeadlessTab;
   private tabUnsubscribe: Unsubscribe = () => {};
+  private excludedFacetsList!: string [];
+  private hasFacetList: boolean = false;
+
 
   @Element() private host!: Element;
   @State() private tabState!: TabState;
 
   public async connectedCallback() {
     try {
+
       this.bindings = await initializeBindings(this.host);
+
+      this.hasFacetList = this.excludedFacets? true : false;
+
+
       const options: TabOptions = {
         id: this.label,
         expression: this.expression,
       };
+
+
       const props: TabProps = {
         initialState: { isActive: this.isActive },
         options: options,
       };
+
+
       this.tabController = buildTab(this.bindings.engine, props);
+
       //Subscribe to controller state changes.
       this.tabUnsubscribe = this.tabController.subscribe(
-        () => (this.tabState = this.tabController.state)
+        () => (this.updateState())
       );
+
     } catch (error) {
       console.error(error);
       this.error = error as Error;
@@ -59,6 +75,36 @@ export class CustomTab {
 
   public disconnectedCallback() {
     this.tabUnsubscribe();
+  }
+
+  private updateState(){
+
+    this.tabState = this.tabController.state
+
+    if (this.tabState.isActive && this.hasFacetList){
+      this.excludedFacetsList = this.excludedFacets.split(',');
+      this.disableExcludedFacets();
+    } 
+    if (!this.tabState.isActive && this.hasFacetList){
+      this.excludedFacetsList = this.excludedFacets.split(',');
+      this.enableExcludedFacets();
+    }
+  }
+
+  private disableExcludedFacets(){
+
+    const { disableFacet } = loadFacetOptionsActions(this.bindings.engine); 
+    this.excludedFacetsList.forEach((facet)=>{
+      this.bindings.engine.dispatch(disableFacet(facet.trimStart()));
+    });
+  }
+
+  private enableExcludedFacets(){
+
+    const { enableFacet } = loadFacetOptionsActions(this.bindings.engine); 
+    this.excludedFacetsList.forEach((facet)=>{
+      this.bindings.engine.dispatch(enableFacet(facet.trimStart()));
+    });
   }
 
   public render() {

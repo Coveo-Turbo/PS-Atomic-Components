@@ -20,12 +20,12 @@
   <body>
     <atomic-search-interface>
       <div class="tab-container"> 
-        <custom-tab expression="" label="All" is-active="true"></custom-tab> 
-        <custom-tab expression="@source==(YouTube)" label="Youtube Sources" is-active="false"></custom-tab> 
+        <custom-tab expression="" label="All" is-active="true" excluded-facets="source"></custom-tab> 
+        <custom-tab expression="@source==(YouTube)" label="Youtube Sources" is-active="false" excluded-facets="filetype"></custom-tab> 
       </div>
       <atomic-search-layout>
         <atomic-layout-section section="search">
-          <atomic-search-box></atomic-search-box>
+          <atomic-search-box></atomic-search-box>ß
         </atomic-layout-section>
         <atomic-layout-section section="facets">
           <atomic-facet-manager>
