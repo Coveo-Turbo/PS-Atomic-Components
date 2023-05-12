@@ -1,0 +1,79 @@
+{
+  "timestamp": "2023-05-12T18:06:54",
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "2.22.2",
+    "typescriptVersion": "4.9.4"
+  },
+  "components": [
+    {
+      "filePath": "./src/search-box-field-suggestions.tsx",
+      "encapsulation": "shadow",
+      "tag": "search-box-field-suggestions",
+      "docs": "The `search-box-field-suggestions` component can be added as a child of an `atomic-search-box` component, allowing for the configuration of category suggestions.",
+      "docsTags": [
+        {
+          "name": "part",
+          "text": "recent-query-title - The 'Recent queries' title."
+        },
+        {
+          "name": "part",
+          "text": "recent-query-clear - The 'Clear' button for clearing recent queries    ."
+        }
+      ],
+      "usage": {},
+      "props": [
+        {
+          "name": "callbackFunction",
+          "type": "string",
+          "mutable": false,
+          "attr": "callback-function",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": true
+        },
+        {
+          "name": "field",
+          "type": "string",
+          "mutable": false,
+          "attr": "field",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": true
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [
+        {
+          "name": "recent-query-clear",
+          "docs": "The 'Clear' button for clearing recent queries    ."
+        },
+        {
+          "name": "recent-query-title",
+          "docs": "The 'Recent queries' title."
+        }
+      ],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    }
+  ]
+}
