@@ -41,6 +41,7 @@ export class CustomTab {
   @State() private tabState!: TabState;
 
   public async connectedCallback() {
+    await customElements.whenDefined('atomic-search-interface');
     try {
 
       this.bindings = await initializeBindings(this.host);

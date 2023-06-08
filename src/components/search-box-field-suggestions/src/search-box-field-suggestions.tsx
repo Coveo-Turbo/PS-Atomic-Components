@@ -33,7 +33,8 @@ export class SearchBoxFieldSuggestions {
   @Prop() field!: string;
 
 
-  connectedCallback() {
+  public async connectedCallback() {
+    await customElements.whenDefined('atomic-search-interface');
     try {
       dispatchSearchBoxSuggestionsEvent((bindings: any) => {
         this.bindings = bindings;

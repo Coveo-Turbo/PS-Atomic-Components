@@ -14,6 +14,7 @@ export class ExportSearchResults {
   @Element() private host!: Element
 
   async connectedCallback() {
+    await customElements.whenDefined('atomic-search-interface');
     this.bindings = await initializeBindings(this.host)
     this.bindings.engine.subscribe(() => {
       if (!this.bindings) return

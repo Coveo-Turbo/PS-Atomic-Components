@@ -18,6 +18,8 @@ export class AddToCart {
   @Prop() callbackFunction: string;
 
   public async connectedCallback() {
+    
+    await customElements.whenDefined('atomic-search-interface');
     // Wait for the Atomic bindings to be resolved.
     this.bindings = await initializeBindings(this.host);
 

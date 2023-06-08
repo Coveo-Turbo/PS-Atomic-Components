@@ -28,6 +28,7 @@ export class SaveQuery {
   @State() private queries: Query[] = []
 
   async connectedCallback() {
+    await customElements.whenDefined('atomic-search-interface');
     this.bindings = await initializeBindings(this.host);
 
     this.queries = this.getQueries()

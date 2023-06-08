@@ -34,7 +34,8 @@ export class SearchBoxCategorySuggestions {
   @Prop() delimiter!: string;
   @Prop() basePath: string[] = [];
 
-  connectedCallback() {
+  public async connectedCallback() {
+    await customElements.whenDefined('atomic-search-interface');
     try {
       dispatchSearchBoxSuggestionsEvent((bindings: any) => {
         this.bindings = bindings;

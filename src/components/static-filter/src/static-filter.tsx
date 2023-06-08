@@ -22,7 +22,9 @@ export class StaticFilterComponent {
   @Prop() public expression!: string;
   @State() public active: boolean = false;
   private unsubscribeState!: Unsubscribe;
+
   public async connectedCallback() {
+    await customElements.whenDefined('atomic-search-interface');
     try {
       this.bindings = await initializeBindings(this.host);
     } catch (error) {
