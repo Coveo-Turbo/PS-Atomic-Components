@@ -1,6 +1,6 @@
 {
   "name": "export-search-results",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Downloads search results into a csv file",
   "homepage": "https://github.com/Coveo-Turbo/PS-Atomic-Components/tree/main/src/components/export-search-results",
   "main": "dist/index.cjs.js",

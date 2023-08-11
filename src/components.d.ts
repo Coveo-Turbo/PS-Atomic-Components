@@ -18,6 +18,7 @@ export namespace Components {
         "expression": string;
         "isActive": boolean;
         "label": string;
+        "tabId": string;
     }
     interface ExportSearchResults {
     }
@@ -123,6 +124,7 @@ declare namespace LocalJSX {
         "expression": string;
         "isActive": boolean;
         "label": string;
+        "tabId": string;
     }
     interface ExportSearchResults {
     }

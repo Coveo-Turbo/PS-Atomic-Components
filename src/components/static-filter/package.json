@@ -1,6 +1,6 @@
 {
   "name": "static-filter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A custom toggle button that filters results in the search interface",
   "homepage": "https://github.com/Coveo-Turbo/PS-Atomic-Components/tree/main/src/components/static-filter",
   "main": "dist/index.cjs.js",

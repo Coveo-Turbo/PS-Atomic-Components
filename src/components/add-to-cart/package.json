@@ -1,6 +1,6 @@
 {
   "name": "custom-atomic-add-to-cart",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Adds an item to shopping cart",
   "homepage": "https://github.com/Coveo-Turbo/PS-Atomic-Components/tree/main/src/components/add-to-cart",
   "main": "dist/index.cjs.js",

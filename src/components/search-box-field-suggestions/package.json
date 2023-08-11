@@ -1,6 +1,6 @@
 {
   "name": "search-box-field-suggestions",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
@@ -23,8 +23,8 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@coveo/headless": "2.8.10",
-    "@coveo/atomic": "2.19.16",
+    "@coveo/headless": "^2.10.1",
+    "@coveo/atomic": "2.21.1",
     "@stencil/core": "2.22.2"
   },
   "devDependencies": {

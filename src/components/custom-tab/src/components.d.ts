@@ -11,6 +11,7 @@ export namespace Components {
         "expression": string;
         "isActive": boolean;
         "label": string;
+        "tabId": string;
     }
 }
 declare global {
@@ -30,6 +31,7 @@ declare namespace LocalJSX {
         "expression": string;
         "isActive": boolean;
         "label": string;
+        "tabId": string;
     }
     interface IntrinsicElements {
         "custom-tab": CustomTab;

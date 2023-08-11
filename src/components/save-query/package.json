@@ -1,6 +1,6 @@
 {
   "name": "save-query",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Adds and saves queries in the browser",
   "homepage": "https://github.com/Coveo-Turbo/PS-Atomic-Components/tree/main/src/components/save-query",
   "main": "dist/index.cjs.js",

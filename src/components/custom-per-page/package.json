@@ -1,6 +1,6 @@
 {
   "name": "custom-per-page",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Controls how many results are displayed per page",
   "homepage": "https://github.com/Coveo-Turbo/PS-Atomic-Components/tree/main/src/components/custom-per-page",
   "main": "dist/index.cjs.js",
