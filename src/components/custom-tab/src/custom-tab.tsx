@@ -28,6 +28,7 @@ export class CustomTab {
   @Prop() label!: string;
   @Prop() isActive!: boolean;
   @Prop() excludedFacets!: string;
+  @Prop() tabId!: string;
 
   private bindings?: Bindings;
   private error?: Error;
@@ -62,11 +63,15 @@ export class CustomTab {
 
 
       this.tabController = buildTab(this.bindings.engine, props);
-
+      this.excludedFacetsList = this.excludedFacets.split(',');
       //Subscribe to controller state changes.
       this.tabUnsubscribe = this.tabController.subscribe(
         () => (this.updateState())
       );
+        
+      if(this.tabState.isActive){
+        this.disableExcludedFacets();
+      }
 
     } catch (error) {
       console.error(error);
@@ -79,17 +84,8 @@ export class CustomTab {
   }
 
   private updateState(){
-
     this.tabState = this.tabController.state
-
-    if (this.tabState.isActive && this.hasFacetList){
-      this.excludedFacetsList = this.excludedFacets.split(',');
-      this.disableExcludedFacets();
-    } 
-    if (!this.tabState.isActive && this.hasFacetList){
-      this.excludedFacetsList = this.excludedFacets.split(',');
-      this.enableExcludedFacets();
-    }
+    this.enableExcludedFacets()
   }
 
   private disableExcludedFacets(){
@@ -108,6 +104,23 @@ export class CustomTab {
     });
   }
 
+  public componentWillLoad(){
+    if (this.isActive && this.hasFacetList){
+       this.disableExcludedFacets();
+    } 
+  }
+  
+  public componentDidUpdate(){
+    if(this.tabState.isActive){
+      this.disableExcludedFacets();
+    }
+  }
+
+  private tabSelect(){
+    this.tabController.select();
+    this.disableExcludedFacets();
+  }
+
   public render() {
     if (this.error) {
       return (
@@ -124,7 +137,7 @@ export class CustomTab {
 
     const activeClass = this.tabState.isActive ? 'active': '';
     return (
-      <a part="tab-anchor" class={activeClass} onClick={() => this.tabController.select()}>
+      <a part="tab-anchor" class={activeClass} onClick={() => this.tabSelect()}>
         <span part="tab-label">{this.label}</span>
       </a>
     );

@@ -13,6 +13,7 @@
 | `expression` _(required)_     | `expression`      |             | `string`  | `undefined` |
 | `isActive` _(required)_       | `is-active`       |             | `boolean` | `undefined` |
 | `label` _(required)_          | `label`           |             | `string`  | `undefined` |
+| `tabId` _(required)_          | `tab-id`          |             | `string`  | `undefined` |
 
 
 ## Shadow Parts
