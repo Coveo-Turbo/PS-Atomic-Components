@@ -51,7 +51,7 @@ export class CustomTab {
 
 
       const options: TabOptions = {
-        id: this.label,
+        id: this.tabId? this.tabId : this.label,
         expression: this.expression,
       };
 
