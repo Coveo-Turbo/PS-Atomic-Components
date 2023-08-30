@@ -28,7 +28,7 @@ declare global {
 declare namespace LocalJSX {
     interface CustomTab {
         "excludedFacets": string;
-        "expression": string;
+        "expression"?: string;
         "isActive": boolean;
         "label": string;
         "tabId": string;

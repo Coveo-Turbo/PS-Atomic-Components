@@ -24,7 +24,7 @@ import {
  */
 
 export class CustomTab {
-  @Prop() expression!: string;
+  @Prop() expression: string = "";
   @Prop() label!: string;
   @Prop() isActive!: boolean;
   @Prop() excludedFacets!: string;
