@@ -7,7 +7,8 @@ import {
   TabProps,
   buildTab,
   Unsubscribe,
-  loadFacetOptionsActions
+  loadFacetOptionsActions,
+  loadFacetSetActions
 } from "@coveo/headless";
 
 @Component({
@@ -91,8 +92,29 @@ export class CustomTab {
   private disableExcludedFacets(){
 
     const { disableFacet } = loadFacetOptionsActions(this.bindings.engine); 
+
     this.excludedFacetsList.forEach((facet)=>{
       this.bindings.engine.dispatch(disableFacet(facet.trimStart()));
+    });
+  }
+
+  private deselectFacetValues(){
+    const { deselectAllFacetValues } = loadFacetSetActions(this.bindings.engine);
+
+    const facetSets = this.bindings.engine.state.facetSet;
+    const facetIds = []
+    for (const k in facetSets){
+      console.log(k);
+      this.bindings.engine.dispatch(deselectAllFacetValues(k));
+      facetIds.push(k)
+    }
+
+    const facetsDiff = facetIds.filter(x => !this.excludedFacetsList.includes(x));
+    console.log(this.tabId," ", facetsDiff);
+    facetsDiff.forEach((f)=>{
+      this.bindings.engine.dispatch(deselectAllFacetValues(f));
+      console.log(f);
+      
     });
   }
 
@@ -118,6 +140,7 @@ export class CustomTab {
 
   private tabSelect(){
     this.tabController.select();
+    this.deselectFacetValues();
     this.disableExcludedFacets();
   }
 
