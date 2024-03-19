@@ -5,6 +5,7 @@
 | :---:   | :---: | :---: |
 | expression | string   | Query expression to be applied when button is toggled  |
 | label | string   | Renders a title for the custom tab   |
+| tab-id | string   | A unique identifier for the tab. The value will be used as the originLevel2 when the tab is active.   |
 | is-active | boolean   | Defines whether the custom tab is active on render. There should only be one active tab on render, if there are multiple, the last rendered active tab will be active   |
 | excluded-facets | string | comma separated list of facetid or facet fields that should be excluded from the tab.|
 
