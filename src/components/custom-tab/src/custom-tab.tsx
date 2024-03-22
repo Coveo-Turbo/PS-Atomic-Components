@@ -25,8 +25,8 @@ import {
 
 export class CustomTab {
   @Prop() expression: string = "";
-  @Prop() label!: string;
-  @Prop() isActive!: boolean;
+  @Prop() label: string = "no-label";
+  @Prop() isActive: boolean = false;
   @Prop() excludedFacets!: string;
   @Prop() tabId!: string;
 
@@ -63,7 +63,7 @@ export class CustomTab {
 
 
       this.tabController = buildTab(this.bindings.engine, props);
-      this.excludedFacetsList = this.excludedFacets.split(',');
+      this.excludedFacetsList = this.excludedFacets?.split(',');
       //Subscribe to controller state changes.
       this.tabUnsubscribe = this.tabController.subscribe(
         () => (this.updateState())
@@ -91,7 +91,7 @@ export class CustomTab {
   private disableExcludedFacets(){
 
     const { disableFacet } = loadFacetOptionsActions(this.bindings.engine); 
-    this.excludedFacetsList.forEach((facet)=>{
+    this.excludedFacetsList?.forEach((facet)=>{
       this.bindings.engine.dispatch(disableFacet(facet.trimStart()));
     });
   }
@@ -99,7 +99,7 @@ export class CustomTab {
   private enableExcludedFacets(){
 
     const { enableFacet } = loadFacetOptionsActions(this.bindings.engine); 
-    this.excludedFacetsList.forEach((facet)=>{
+    this.excludedFacetsList?.forEach((facet)=>{
       this.bindings.engine.dispatch(enableFacet(facet.trimStart()));
     });
   }

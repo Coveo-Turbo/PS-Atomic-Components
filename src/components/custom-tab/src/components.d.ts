@@ -29,8 +29,8 @@ declare namespace LocalJSX {
     interface CustomTab {
         "excludedFacets": string;
         "expression"?: string;
-        "isActive": boolean;
-        "label": string;
+        "isActive"?: boolean;
+        "label"?: string;
         "tabId": string;
     }
     interface IntrinsicElements {
