@@ -1,5 +1,5 @@
 import { Bindings, initializeBindings } from "@coveo/atomic";
-import { Component, Element, h, Prop, State } from "@stencil/core";
+import { Component, Element, forceUpdate, h, Prop, State } from "@stencil/core";
 import {
   TabState,
   Tab as HeadlessTab,
@@ -34,6 +34,7 @@ export class CustomTab {
   private error?: Error;
   private tabController!: HeadlessTab;
   private tabUnsubscribe: Unsubscribe = () => {};
+  private i18nUnsubscribe = () => {};
   private excludedFacetsList!: string [];
   private hasFacetList: boolean = false;
 
@@ -73,6 +74,11 @@ export class CustomTab {
         this.disableExcludedFacets();
       }
 
+      const updateLanguage = () => forceUpdate(this);
+      this.bindings!.i18n.on("languageChanged", updateLanguage);
+      this.i18nUnsubscribe = () => 
+        this.bindings!.i18n.off("languageChanged", updateLanguage);
+
     } catch (error) {
       console.error(error);
       this.error = error as Error;
@@ -81,6 +87,7 @@ export class CustomTab {
 
   public disconnectedCallback() {
     this.tabUnsubscribe();
+    this.i18nUnsubscribe();
   }
 
   private updateState(){
