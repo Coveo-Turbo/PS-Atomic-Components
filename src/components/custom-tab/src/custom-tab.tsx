@@ -138,7 +138,7 @@ export class CustomTab {
     const activeClass = this.tabState.isActive ? 'active': '';
     return (
       <a part={`tab-anchor ${activeClass}`} class={activeClass} onClick={() => this.tabSelect()}>
-        <span part="tab-label">{this.label}</span>
+        <span part="tab-label">{this.bindings.i18n.t(this.label)}</span>
       </a>
     );
   }
