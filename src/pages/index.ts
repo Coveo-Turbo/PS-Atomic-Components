@@ -6,7 +6,7 @@ async function main() {
     document.querySelector('atomic-search-interface')!;
   await searchInterface.initialize({
     organizationId: 'barcagroupproductionkwvdy6lp',
-    accessToken: 'xxfbc21fae-f1ee-45f9-8a7a-a7de938e0e05',
+    accessToken: 'xx5a7943ef-ea52-42e5-8742-51198cc651f7',
   });
 
   searchInterface.executeFirstSearch();

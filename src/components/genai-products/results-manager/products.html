@@ -1,0 +1,32 @@
+<style>
+  .field {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .result-container {
+    display: flex;
+    flex-direction: column;
+  }
+  atomic-result-image {
+    min-height: 120px;
+    max-height: 200px;
+  }
+  atomic-result-number {
+    font-size: large;
+  }
+</style>
+
+<div class="result-container">
+  <category-leaf></category-leaf>
+  <atomic-result-image field="ec_images"></atomic-result-image>
+  <atomic-result-link></atomic-result-link>
+
+  <atomic-result-number field="ec_price">
+    <atomic-format-currency currency="USD"></atomic-format-currency>
+  </atomic-result-number>
+
+  <atomic-result-text field="currentcategorydisplaynames"></atomic-result-text>
+
+  <product-grouping></product-grouping>
+</div>

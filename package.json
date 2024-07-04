@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "@coveo/atomic": "2.21.1",
-    "@stencil/core": "2.22.2"
+    "@stencil/core": "2.22.2",
+    "path-scurry": "^1.11.1"
   },
   "devDependencies": {
     "@coveo/headless": "^2.10.1",

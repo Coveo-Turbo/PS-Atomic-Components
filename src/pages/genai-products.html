@@ -1,0 +1,28 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GenAI - Products</title>
+    <link href="/index.css" rel="stylesheet" />
+    <link href="/atomic/themes/coveo.css" rel="stylesheet" />
+    <script type="module" src="https://static.cloud.coveo.com/atomic/v2.65.1/atomic.esm.js"></script>
+    <script type="module" src="/build/my-custom-components.esm.js"></script>
+  </head>
+  <body>
+    <atomic-search-interface search-hub="Search" pipeline="Engineering GenAI">
+        <atomic-search-layout>
+        <atomic-layout-section section="search">
+            <atomic-search-box></atomic-search-box>
+        </atomic-layout-section>
+        <atomic-layout-section section="main">
+            <atomic-layout-section section="status"></atomic-layout-section>
+            <atomic-layout-section section="results">
+            <atomic-generated-answer></atomic-generated-answer>
+            </atomic-layout-section>
+        </atomic-layout-section>
+        </atomic-search-layout>
+        <products-from-generated-answer orgId="barcagroupproductionkwvdy6lp" apiKey="xx5a7943ef-ea52-42e5-8742-51198cc651f7" searchHub="Search" contextRGA='{"website":"GenAI","enableSemantic":"true"}' contextProduct='{"website":"engineering","enableSemantic":"true"}' pipeline="Engineering"></products-from-generated-answer>
+    </atomic-search-interface>
+  </body>
+  </html>

@@ -9,6 +9,12 @@ export namespace Components {
     interface AddToCart {
         "callbackFunction": string;
     }
+    /**
+     * Component used to manage results & result templates.
+     * See https://docs.coveo.com/en/atomic/latest/usage/create-a-result-list/
+     */
+    interface CategoryLeaf {
+    }
     interface CustomPerPage {
         "choicesDisplayed": string;
         "initialChoice"?: number;
@@ -21,6 +27,37 @@ export namespace Components {
         "tabId": string;
     }
     interface ExportSearchResults {
+    }
+    /**
+     * Component used to manage results & result templates.
+     * See https://docs.coveo.com/en/atomic/latest/usage/create-a-result-list/
+     */
+    interface ProductGrouping {
+    }
+    interface ProductsFromGeneratedAnswer {
+        "apikey": string;
+        "contextproduct": string;
+        "contextrga": string;
+        "debug": boolean;
+        "filterfields": string;
+        "orgid": string;
+        "pipeline": string;
+        "prompt": string;
+        "rgaurl": string;
+        "searchhub": string;
+        "tab": string;
+    }
+    /**
+     * Component used to manage results & result templates.
+     * See https://docs.coveo.com/en/atomic/latest/usage/create-a-result-list/
+     */
+    interface ResultsManager {
+    }
+    /**
+     * Component used to manage results & result templates.
+     * See https://docs.coveo.com/en/atomic/latest/usage/create-a-result-list/
+     */
+    interface ResultsManagerForProducts {
     }
     interface SaveQuery {
     }
@@ -52,6 +89,16 @@ declare global {
         prototype: HTMLAddToCartElement;
         new (): HTMLAddToCartElement;
     };
+    /**
+     * Component used to manage results & result templates.
+     * See https://docs.coveo.com/en/atomic/latest/usage/create-a-result-list/
+     */
+    interface HTMLCategoryLeafElement extends Components.CategoryLeaf, HTMLStencilElement {
+    }
+    var HTMLCategoryLeafElement: {
+        prototype: HTMLCategoryLeafElement;
+        new (): HTMLCategoryLeafElement;
+    };
     interface HTMLCustomPerPageElement extends Components.CustomPerPage, HTMLStencilElement {
     }
     var HTMLCustomPerPageElement: {
@@ -69,6 +116,42 @@ declare global {
     var HTMLExportSearchResultsElement: {
         prototype: HTMLExportSearchResultsElement;
         new (): HTMLExportSearchResultsElement;
+    };
+    /**
+     * Component used to manage results & result templates.
+     * See https://docs.coveo.com/en/atomic/latest/usage/create-a-result-list/
+     */
+    interface HTMLProductGroupingElement extends Components.ProductGrouping, HTMLStencilElement {
+    }
+    var HTMLProductGroupingElement: {
+        prototype: HTMLProductGroupingElement;
+        new (): HTMLProductGroupingElement;
+    };
+    interface HTMLProductsFromGeneratedAnswerElement extends Components.ProductsFromGeneratedAnswer, HTMLStencilElement {
+    }
+    var HTMLProductsFromGeneratedAnswerElement: {
+        prototype: HTMLProductsFromGeneratedAnswerElement;
+        new (): HTMLProductsFromGeneratedAnswerElement;
+    };
+    /**
+     * Component used to manage results & result templates.
+     * See https://docs.coveo.com/en/atomic/latest/usage/create-a-result-list/
+     */
+    interface HTMLResultsManagerElement extends Components.ResultsManager, HTMLStencilElement {
+    }
+    var HTMLResultsManagerElement: {
+        prototype: HTMLResultsManagerElement;
+        new (): HTMLResultsManagerElement;
+    };
+    /**
+     * Component used to manage results & result templates.
+     * See https://docs.coveo.com/en/atomic/latest/usage/create-a-result-list/
+     */
+    interface HTMLResultsManagerForProductsElement extends Components.ResultsManagerForProducts, HTMLStencilElement {
+    }
+    var HTMLResultsManagerForProductsElement: {
+        prototype: HTMLResultsManagerForProductsElement;
+        new (): HTMLResultsManagerForProductsElement;
     };
     interface HTMLSaveQueryElement extends Components.SaveQuery, HTMLStencilElement {
     }
@@ -102,9 +185,14 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "add-to-cart": HTMLAddToCartElement;
+        "category-leaf": HTMLCategoryLeafElement;
         "custom-per-page": HTMLCustomPerPageElement;
         "custom-tab": HTMLCustomTabElement;
         "export-search-results": HTMLExportSearchResultsElement;
+        "product-grouping": HTMLProductGroupingElement;
+        "products-from-generated-answer": HTMLProductsFromGeneratedAnswerElement;
+        "results-manager": HTMLResultsManagerElement;
+        "results-manager-for-products": HTMLResultsManagerForProductsElement;
         "save-query": HTMLSaveQueryElement;
         "search-box-category-suggestions": HTMLSearchBoxCategorySuggestionsElement;
         "search-box-field-suggestions": HTMLSearchBoxFieldSuggestionsElement;
@@ -114,6 +202,12 @@ declare global {
 declare namespace LocalJSX {
     interface AddToCart {
         "callbackFunction"?: string;
+    }
+    /**
+     * Component used to manage results & result templates.
+     * See https://docs.coveo.com/en/atomic/latest/usage/create-a-result-list/
+     */
+    interface CategoryLeaf {
     }
     interface CustomPerPage {
         "choicesDisplayed": string;
@@ -127,6 +221,37 @@ declare namespace LocalJSX {
         "tabId": string;
     }
     interface ExportSearchResults {
+    }
+    /**
+     * Component used to manage results & result templates.
+     * See https://docs.coveo.com/en/atomic/latest/usage/create-a-result-list/
+     */
+    interface ProductGrouping {
+    }
+    interface ProductsFromGeneratedAnswer {
+        "apikey"?: string;
+        "contextproduct": string;
+        "contextrga": string;
+        "debug"?: boolean;
+        "filterfields": string;
+        "orgid"?: string;
+        "pipeline": string;
+        "prompt"?: string;
+        "rgaurl"?: string;
+        "searchhub"?: string;
+        "tab": string;
+    }
+    /**
+     * Component used to manage results & result templates.
+     * See https://docs.coveo.com/en/atomic/latest/usage/create-a-result-list/
+     */
+    interface ResultsManager {
+    }
+    /**
+     * Component used to manage results & result templates.
+     * See https://docs.coveo.com/en/atomic/latest/usage/create-a-result-list/
+     */
+    interface ResultsManagerForProducts {
     }
     interface SaveQuery {
     }
@@ -152,9 +277,14 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "add-to-cart": AddToCart;
+        "category-leaf": CategoryLeaf;
         "custom-per-page": CustomPerPage;
         "custom-tab": CustomTab;
         "export-search-results": ExportSearchResults;
+        "product-grouping": ProductGrouping;
+        "products-from-generated-answer": ProductsFromGeneratedAnswer;
+        "results-manager": ResultsManager;
+        "results-manager-for-products": ResultsManagerForProducts;
         "save-query": SaveQuery;
         "search-box-category-suggestions": SearchBoxCategorySuggestions;
         "search-box-field-suggestions": SearchBoxFieldSuggestions;
@@ -166,9 +296,30 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "add-to-cart": LocalJSX.AddToCart & JSXBase.HTMLAttributes<HTMLAddToCartElement>;
+            /**
+             * Component used to manage results & result templates.
+             * See https://docs.coveo.com/en/atomic/latest/usage/create-a-result-list/
+             */
+            "category-leaf": LocalJSX.CategoryLeaf & JSXBase.HTMLAttributes<HTMLCategoryLeafElement>;
             "custom-per-page": LocalJSX.CustomPerPage & JSXBase.HTMLAttributes<HTMLCustomPerPageElement>;
             "custom-tab": LocalJSX.CustomTab & JSXBase.HTMLAttributes<HTMLCustomTabElement>;
             "export-search-results": LocalJSX.ExportSearchResults & JSXBase.HTMLAttributes<HTMLExportSearchResultsElement>;
+            /**
+             * Component used to manage results & result templates.
+             * See https://docs.coveo.com/en/atomic/latest/usage/create-a-result-list/
+             */
+            "product-grouping": LocalJSX.ProductGrouping & JSXBase.HTMLAttributes<HTMLProductGroupingElement>;
+            "products-from-generated-answer": LocalJSX.ProductsFromGeneratedAnswer & JSXBase.HTMLAttributes<HTMLProductsFromGeneratedAnswerElement>;
+            /**
+             * Component used to manage results & result templates.
+             * See https://docs.coveo.com/en/atomic/latest/usage/create-a-result-list/
+             */
+            "results-manager": LocalJSX.ResultsManager & JSXBase.HTMLAttributes<HTMLResultsManagerElement>;
+            /**
+             * Component used to manage results & result templates.
+             * See https://docs.coveo.com/en/atomic/latest/usage/create-a-result-list/
+             */
+            "results-manager-for-products": LocalJSX.ResultsManagerForProducts & JSXBase.HTMLAttributes<HTMLResultsManagerForProductsElement>;
             "save-query": LocalJSX.SaveQuery & JSXBase.HTMLAttributes<HTMLSaveQueryElement>;
             /**
              * The `search-box-category-suggestions` component can be added as a child of an `atomic-search-box` component, allowing for the configuration of category suggestions.

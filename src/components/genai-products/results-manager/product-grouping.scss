@@ -1,0 +1,14 @@
+.related-products-container {
+  margin-top: 20px;
+
+  .related-products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    img {
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
