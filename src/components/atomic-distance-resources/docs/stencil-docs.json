@@ -1,0 +1,267 @@
+{
+  "timestamp": "2025-06-23T15:11:59",
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "2.22.2",
+    "typescriptVersion": "4.9.4"
+  },
+  "components": [
+    {
+      "filePath": "./src/atomic-distance-resources.tsx",
+      "encapsulation": "shadow",
+      "tag": "atomic-distance-resources",
+      "readme": "# atomic-distance-resources\r\n\r\n\r\n\r",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "defaultLatitude",
+          "type": "number",
+          "mutable": false,
+          "attr": "default-latitude",
+          "reflectToAttr": false,
+          "docs": "The default latitude value to be used if no other location is provided.",
+          "docsTags": [],
+          "default": "33.9348279",
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "defaultLongitude",
+          "type": "number",
+          "mutable": false,
+          "attr": "default-longitude",
+          "reflectToAttr": false,
+          "docs": "The default longitude value to be used if no other location is provided.",
+          "docsTags": [],
+          "default": "-84.3546017",
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "distanceField",
+          "type": "string",
+          "mutable": false,
+          "attr": "distance-field",
+          "reflectToAttr": false,
+          "docs": "Specifies the name of the field in which to store the distance value.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": true
+        },
+        {
+          "name": "geospatialDistances",
+          "type": "string | string[]",
+          "mutable": false,
+          "attr": "geospatial-distances",
+          "reflectToAttr": false,
+          "docs": "The array of geospatial distances, as a string (e.g., `\"[25, 50, 100]\"`), which will be parsed\r\nand converted into options for the distance dropdown.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "string[]"
+            }
+          ],
+          "optional": false,
+          "required": true
+        },
+        {
+          "name": "googleApiKey",
+          "type": "string",
+          "mutable": false,
+          "attr": "google-api-key",
+          "reflectToAttr": false,
+          "docs": "A valid Google API key to be used for geocoding a city or postal code.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": true
+        },
+        {
+          "name": "isCollapsed",
+          "type": "boolean",
+          "mutable": true,
+          "attr": "is-collapsed",
+          "reflectToAttr": true,
+          "docs": "Specifies whether the facet is collapsed. When the facet is the child of an `atomic-facet-manager` component, the facet manager controls this property.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "latitudeField",
+          "type": "string",
+          "mutable": false,
+          "attr": "latitude-field",
+          "reflectToAttr": false,
+          "docs": "Specifies the name of the field that contains the latitude value.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": true
+        },
+        {
+          "name": "longitudeField",
+          "type": "string",
+          "mutable": false,
+          "attr": "longitude-field",
+          "reflectToAttr": false,
+          "docs": "Specifies the name of the field that contains the longitude value.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": true
+        },
+        {
+          "name": "panelTitle",
+          "type": "string",
+          "mutable": false,
+          "attr": "panel-title",
+          "reflectToAttr": false,
+          "docs": "The text that appears in the header.",
+          "docsTags": [],
+          "default": "'Distance'",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "useNavigator",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "use-navigator",
+          "reflectToAttr": false,
+          "docs": "Whether to request the geolocation service of the web browser. If not defined, will not try to request the service.\r\nDefaults to `true`.",
+          "docsTags": [],
+          "default": "true",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [
+        {
+          "name": "content",
+          "docs": ""
+        },
+        {
+          "name": "distance-selector",
+          "docs": ""
+        },
+        {
+          "name": "distance-selector-container",
+          "docs": ""
+        },
+        {
+          "name": "distance-selector-wrapper",
+          "docs": ""
+        },
+        {
+          "name": "error-message",
+          "docs": ""
+        },
+        {
+          "name": "form-container",
+          "docs": ""
+        },
+        {
+          "name": "from-box",
+          "docs": ""
+        },
+        {
+          "name": "km-input",
+          "docs": ""
+        },
+        {
+          "name": "km-label",
+          "docs": ""
+        },
+        {
+          "name": "label-button",
+          "docs": ""
+        },
+        {
+          "name": "label-button-icon",
+          "docs": ""
+        },
+        {
+          "name": "metric-container",
+          "docs": ""
+        },
+        {
+          "name": "mile-input",
+          "docs": ""
+        },
+        {
+          "name": "mile-label",
+          "docs": ""
+        },
+        {
+          "name": "panel",
+          "docs": ""
+        },
+        {
+          "name": "postal-field-container",
+          "docs": ""
+        },
+        {
+          "name": "postal-filter-input",
+          "docs": ""
+        }
+      ],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    }
+  ]
+}
